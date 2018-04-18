@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<metacharset = "UTF-8">
+<title>Address Book</title>
+<head>
+<link rel="stylesheet" type = "text/css" href="styles1.css">
+<script>
+//function to add items to the list 
+
+ function addLi() {
+
+//search for text input
+
+var text = document.getElementById('text_input').value;
+
+//check if texbox is empty
+
+  if(text!=''){
+
+//create new list item
+   var newItem = document.createElement("li");
+
+   
+//assign value entered to list  
+   newItem.innerHTML = text;
+
+  var list = document.getElementById("item-area").appendChild(newItem);
+  
+  //clicking on a list item deletes it
+  newItem.onclick = removeItem;
+  
+  
+}
+
+  }
+
+
+//function to remove items from the list
+
+function removeItem(){
+	document.getElementById("item-area").removeChild(this);
+  
+}
+</script>
+</head>
+<body>
+<h1>your contacts</h1>
+<form>
+<label> Name:</label>
+<input id ="User" name ="username" type ="text"/>
+</form>
+<form>
+<label> Phone:</label>
+<input id="tel" name="tel" type="tel" placeholder="555.555.1211" />
+</form>
+<form>
+<label for = "email" > e-mail address:</label>
+<input type="text" name="email"
+placeholder="email@example.com"/>
+</form>
+<form>
+<label> Email</label>
+<input id="email" name="email" type="email" placeholder="example@example.com" />
+</form>
+<form>
+<label> Street:</label>
+<input id ="User" name ="username" type ="text"/>
+</form>
+<form>
+<label> City:</label>
+<input id ="User" name ="username" type ="text"/>
+</form>
+<form>
+<label> State:</label>
+<input id ="User" name ="username" type ="text"/>
+</form>
+<form>
+<label> your url:</label>
+<input id="url" name="url" type="url" placeholder="example.com" />
+</form>
+<form>
+<label> Search </label>
+<input id= "my search" name = "search item" type="search"/>
+</form>
+<input type ="submit" value="submit"/>
+</form>
+</body>
+</html>
